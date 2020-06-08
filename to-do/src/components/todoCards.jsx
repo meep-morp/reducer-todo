@@ -10,8 +10,8 @@ const TodoCards = props => {
                     className="singleCard"
                     onClick={() => onComplete(todo.id)}
                 >
-                    <h2>{todo.item}</h2>
-                    <h3>{todo.completed ? 'O' : 'X'}</h3>
+                    <p>{todo.item}</p>
+                    <p>{todo.completed ? 'DONE' : 'X'}</p>
                 </div>
             ))}
         </div>

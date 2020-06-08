@@ -1,5 +1,6 @@
 import React, { useState, useReducer } from "react";
 import { reducer, initialState } from "./reducers/todoReducer";
+import vector from "../images/monitorVector.png";
 import "../style/App.css";
 import Form from "./form";
 import TodoCards from "./todoCards";
@@ -8,14 +9,17 @@ function App() {
   const [value, setValue] = useState("");
   const [{ todos }, dispatch] = useReducer(reducer, { todos: [initialState] });
 
+  const editable = document.querySelectorAll('div[contentEditable]');
+
   const onChangeHandler = event => {
-    setValue(event.target.value);
+    setValue(event.target.textContent);
   };
 
   const onSubmitHandler = event => {
+    const target = document.querySelector("#input");
     event.preventDefault();
     dispatch({ type: "NEW_TODO", payload: value });
-    setValue("");
+    target.textContent = "";
   };
 
   const onComplete = id => {
@@ -44,6 +48,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>TODO_TRACKER_64</h1>
       <Form
         dispatch={dispatch}
         value={value}

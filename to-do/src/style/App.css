@@ -1,38 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/*  GENERAL  */
+
+.hidden {
+  display: none;
+}
+
+html {
+  color: rgb(68, 184, 68);
+  background: black;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* animation-name: scroll;
+  animation-duration: 5s;
+  animation-iteration-count: 1; */
+  font-family: 'Press Start 2P', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes scroll {
+  0% {transform: translateY(300%);}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.singleCard {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/*  FORM   */
+/* .insert {
+  caret-color: transparent;
+  animation-name: insert;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  width: 5px;
+  height: 40px;
+  margin-bottom: 7px;
+  background-color: rgb(68, 184, 68);
+} */
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#input {
+  outline: none;
+  border: none;
+  width: 25%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  background-color: black;
+  color: rgb(68, 184, 68);
+  caret-color: transparent;
+} 
+
+#input[contentEditable="true"]::before {
+   content: ">";
+   color: rgb(68, 184, 68);
+   position: absolute;
+   transform: translate(-20px, 10px);
+}
+
+#input::after {
+   content: "⬛";
+   color: rgb(68, 184, 68);
+   font-size: 2rem;
+   animation: insert 1s infinite;
+   animation-timing-function: step-end;
+   margin-left: 1px;
+}
+@keyframes insert {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+button {
+  font-family: 'Press Start 2P', cursive;
+  color: rgb(68, 184, 68);
+  background-color: transparent;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
