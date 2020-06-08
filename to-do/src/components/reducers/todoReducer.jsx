@@ -1,8 +1,21 @@
-import React, { useReducer } from "react";
-
 export const reducer = (state, action) => {
+    console.log(state.todos)
     switch (action.type) {
-        default: return state;
+        case ("NEW_TODO"):
+            return {
+                todos: [
+                    ...state.todos,
+                    {
+                        item: action.payload,
+                        id: new Date(),
+                        completed: false
+                    }
+                ]
+            }
+        case ("MARK_COMPLETE"):
+            return {todos: action.payload}
+        default: console.log("default");
+            return state;
     }
 }
 
