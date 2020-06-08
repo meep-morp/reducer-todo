@@ -1,9 +1,7 @@
 import React from "react";
 
 const TodoCards = props => {
-
     const { todos, onComplete } = props;
-    console.log(todos);
 
     return (
         <div className="todoCards">

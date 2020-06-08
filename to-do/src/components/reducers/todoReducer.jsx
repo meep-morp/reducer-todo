@@ -1,5 +1,4 @@
 export const reducer = (state, action) => {
-    console.log(state.todos)
     switch (action.type) {
         case ("NEW_TODO"):
             return {
@@ -13,6 +12,8 @@ export const reducer = (state, action) => {
                 ]
             }
         case ("MARK_COMPLETE"):
+            return {todos: action.payload}
+        case("CLEAR_COMPLETE"): 
             return {todos: action.payload}
         default: console.log("default");
             return state;
