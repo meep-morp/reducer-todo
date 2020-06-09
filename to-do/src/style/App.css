@@ -75,11 +75,10 @@
 html {
   color: rgb(68, 184, 68);
   background: rgb(22,77,16);
-  background: radial-gradient(circle, 
-    rgb(16, 56, 11) 0%, 
-    rgba(0,0,0,1) 100%);
   border: 5px rgb(68, 184, 68) solid;
 }
+
+
 
 p {
   color: rgb(68, 184, 68);
@@ -93,6 +92,10 @@ p {
   /* animation-name: scroll;
   animation-duration: 5s;
   animation-iteration-count: 1; */
+
+  background: radial-gradient(circle, 
+  rgb(16, 56, 11) 0%, 
+  rgba(0,0,0,1) 100%);
   font-family: 'Press Start 2P', cursive;
   display: flex;
   flex-direction: column;
@@ -234,17 +237,7 @@ nav p {
 }
 
 /*  FORM   */
-/* .insert {
-  caret-color: transparent;
-  animation-name: insert;
-  animation-duration: 1s;
-  animation-fill-mode: backwards;
-  animation-iteration-count: infinite;
-  width: 5px;
-  height: 40px;
-  margin-bottom: 7px;
-  background-color: rgb(68, 184, 68);
-} */
+
 form {
   width: 100%;
   display: flex;
