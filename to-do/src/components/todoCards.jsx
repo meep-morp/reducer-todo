@@ -10,7 +10,7 @@ const TodoCards = props => {
                     className="singleCard"
                     onClick={() => onComplete(todo.id)}
                 >
-                    <p>{todo.item}</p>
+                    <p className={todo.completed ? 'strike' : ''}>{todo.item}</p>
                     <p>{todo.completed ? 'DONE' : 'X'}</p>
                 </div>
             ))}

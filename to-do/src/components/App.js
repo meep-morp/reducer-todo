@@ -48,6 +48,10 @@ function App() {
 
   return (
     <div className="App">
+      <nav>
+        <p>X</p>
+        <p>-</p>
+      </nav>
       <h1>TODO_TRACKER_64</h1>
       <Form
         dispatch={dispatch}

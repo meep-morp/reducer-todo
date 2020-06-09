@@ -10,11 +10,14 @@ const Form = props => {
                 contentEditable="true"
                 id="input"
                 onInput={onChangeHandler}
-                onKeyPress={onSubmitHandler}
+                onKeyPress={event => {
+                    if (event.charCode == 13) {
+                        onSubmitHandler(event)
+                    }
+                }}
                 value={value}
                 type="text"
             />
-           <button onClick={onSubmitHandler}>+</button>
         </form>
     )
 }
