@@ -82,6 +82,7 @@ html {
 }
 
 p {
+  color: rgb(68, 184, 68);
   font-size: 1.2rem;
   animation-name: textShadow;
   animation-duration: 0.5s;
@@ -120,7 +121,6 @@ p {
   background-size: 100% 10px, 7px 100%;
   pointer-events: none;
 }
-
 @keyframes flicker {
   0% {
   opacity: 0.27861;
@@ -252,6 +252,7 @@ form {
 }
 
 h1 {
+  color: rgb(68, 184, 68);
   animation-name: textShadow;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
