@@ -117,7 +117,7 @@ p {
       rgba(0, 255, 0, 0.02), 
       rgba(0, 0, 255, 0.06));
   z-index: 2;
-  background-size: 100% 10px, 15px 100%;
+  background-size: 100% 10px, 7px 100%;
   pointer-events: none;
 }
 
